@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-navigation-drawer
+      app
+      dark
+      mini-variant
+      mini-variant-width="96"
+      permanent
+    >
+     <v-list
+        dense
+        nav
+      >
+        <NavItem color="blue" icon="mdi-account-circle"/>
+      </v-list>
+    </v-navigation-drawer>
+    <v-content>
+      <router-view/>
+    </v-content>
+    <v-footer 
+      padless
+      app>
+      hello world
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavItem from "./components/NavItem.vue"
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    NavItem
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
