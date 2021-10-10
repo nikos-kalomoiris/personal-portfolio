@@ -1,22 +1,10 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      app
-      dark
-      mini-variant
-      mini-variant-width="96"
-      permanent
-    >
-     <v-list
-        dense
-        nav
-      >
-        <NavItem color="blue" icon="mdi-account-circle"/>
-      </v-list>
-    </v-navigation-drawer>
-    <v-content>
+    <Sidebar />
+    <v-main>
       <router-view/>
-    </v-content>
+    </v-main>
+
     <v-footer 
       padless
       app>
@@ -26,11 +14,11 @@
 </template>
 
 <script>
-import NavItem from "./components/NavItem.vue"
+import Sidebar from "./components/sidebar/Sidebar.vue"
 export default {
   name: 'App',
   components: {
-    NavItem
+    Sidebar
   },
   data: () => ({
     //
