@@ -4,12 +4,6 @@
     <v-main>
       <router-view/>
     </v-main>
-
-    <v-footer 
-      padless
-      app>
-      hello world
-    </v-footer>
   </v-app>
 </template>
 

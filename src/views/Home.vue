@@ -13,3 +13,9 @@
     },
   }
 </script>
+
+<style>
+  body {
+    background-color: black !important;
+  }
+</style>
